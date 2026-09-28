@@ -1,5 +1,5 @@
 variable "sg_names" {
-    type = list 
+    type = string 
 }
 
 variable "vpc_id" {
