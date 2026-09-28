@@ -7,7 +7,7 @@ variable "vpc_id" {
 }
 
 variable "sg_description" {
-    type = "string"
+    type = string
 }
 
 variable "sg_tags" {
