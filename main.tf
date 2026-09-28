@@ -1,6 +1,5 @@
 resource "aws_security_group" "main" {
-  count = length(var.sg_names)
-  name        = var.sg_names[count.index]
+  name        = var.sg_names
   description = var.sg_description
   vpc_id      = var.vpc_id
 
@@ -14,7 +13,7 @@ resource "aws_security_group" "main" {
     var.sg_tags,
     local.common_tags,
     {
-        Name = "${local.common_name}-${var.sg_names[count.index]}" #roboshop-dev-catalogue
+        Name = "${local.common_name}-${var.sg_names}" #roboshop-dev-catalogue
     }
   )
 }
