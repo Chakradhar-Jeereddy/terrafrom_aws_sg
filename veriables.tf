@@ -1,8 +1,5 @@
 variable "sg_names" {
     type = list 
-    default = [ "mongodb", "catalogue", 
-    "cart", "user", "shipping", "mysql", 
-    "payment", "redis", "rabbitmq", "forntend" ]
 }
 
 variable "vpc_id" {
